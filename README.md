@@ -1,5 +1,2 @@
-# lecture-7a-demo
+# cs147-project
 
-Boilerplate nested navigation (tab + stack) and Firestore storage tutorials
-# cs147-project
-# cs147-project
