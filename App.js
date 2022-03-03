@@ -41,10 +41,12 @@ export default function App() {
           tabBarInactiveTintColor: 'white',
           tabBarActiveBackgroundColor: '#f8b432',
           tabBarInactiveBackgroundColor: '#f8b432',
-          tabBarStyle: {backgroundColor: "#f8b432"}
-        })}>
+          tabBarStyle: {backgroundColor: "#f8b432"},
+          tabBarShowLabel: false,
+        })
+        }>
         
-        <Tab.Screen name="HomeStack" component={HomeStack} />
+        <Tab.Screen name="HomeStack" component={HomeStack} options={{ headerShown: false }} />
         <Tab.Screen name="SettingsStack" component={SettingStack} />
         {/* <Tab.Screen name="OnboardingProfileStack" component={OnboardingProfileStack} /> */}
         <Tab.Screen name="OnboardingProfileStack" component={OnboardingProfileStack} />
