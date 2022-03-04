@@ -11,7 +11,6 @@ const RestaurantPage = ({ navigation, route }) => {
     navigation.setOptions({ headerTitle: params.name, });
   })
   
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -25,6 +24,7 @@ const RestaurantPage = ({ navigation, route }) => {
           </View>
         </View>
       </View>
+
       <View style={styles.walkthroughView}>
         <View style={styles.restaurantInfoView}>
           <Text style={styles.restaurantInfoText}>MORE INFORMATION</Text>
@@ -35,12 +35,7 @@ const RestaurantPage = ({ navigation, route }) => {
             <Ionicons name="grid-outline" size={18} style={styles.galleryIcon}></Ionicons>
             <Text style={styles.galleryText}>GALLERY</Text>
           </View>
-          
         </View>
-        
-
-        
-
         <View style={styles.flatlistView}>
           <InstaStory data={params.walkthrough}
               duration={10}
@@ -49,9 +44,8 @@ const RestaurantPage = ({ navigation, route }) => {
               // customSwipeUpComponent={<View></View>}
               style={{marginTop: "2%"}}/>
         </View>
-
-        
       </View>
+      
       <View style={styles.menuView}>
         <Text style={styles.sectionText}>MENU</Text>
       </View>

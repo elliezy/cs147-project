@@ -7,7 +7,6 @@ import { doc, onSnapshot } from "firebase/firestore";
 import MapView from 'react-native-maps';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
-// import { SafeAreaView } from "react-native-safe-area-context";
 import Restaurant from '../../Restaurant'
 import { collection, getDocs } from "firebase/firestore";
 
@@ -15,8 +14,8 @@ import { collection, getDocs } from "firebase/firestore";
 const Home = () => {
   const navigation = useNavigation();
   const [restaurants, setRestaurants] = useState([]);
-  // const [songData, setSongData] = useState({});
   
+  // const [songData, setSongData] = useState({});
 
   // // Adding document to a collection
   // const addDocument = async () => {
@@ -100,24 +99,7 @@ const Home = () => {
   
   return (
     <View style={styles.container}>
-      {/* <MapView
-        style={{...StyleSheet.absoluteFillObject}}
-        initialRegion={{
-        latitude: 37.78825,
-        longitude: -122.4324,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
-        }}
-      /> */}
-      {/* <Button
-        title="Navigate me"
-        onPress={() => navigation.navigate("HomeProfile")}
-        style={styles.button}
-      /> */}
-
-
       <View style={styles.mapView}>
-        {/* <Text>insert map here</Text> */}
         <MapView
           style={{...StyleSheet.absoluteFillObject}}
           initialRegion={{
@@ -128,10 +110,12 @@ const Home = () => {
           }}
         />
       </View>
+
       <View style={styles.locationView}>
         <Ionicons name="location-outline" size={25}></Ionicons>
         <Text style={styles.locationText}> Stanford, CA 94305</Text>
       </View>
+
       <View style={styles.menuBar}>
         <View style={{flex: 2, flexDirection: "row" }}>
           <Text style={styles.filterText}>Recommended For You </Text>
@@ -145,7 +129,6 @@ const Home = () => {
           data={restaurants}
           renderItem={({item}) => renderRestaurant({item})}
           keyExtractor={(item) => item.name} 
-          // style={styles.flatlist}
         />
       </View>
       
@@ -199,7 +182,6 @@ const styles = StyleSheet.create({
   filterText: {
     fontWeight: 'bold',
     fontSize: 20,
-    
   },
   flatlistView: {
     flex: 12,

@@ -1,24 +1,38 @@
 import { StyleSheet } from "react-native";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import ProfileScreen from "./ProfileScreen";
 import OnboardingSwiper from "./OnboardingSwiper";
-import OnboardingOne from "./OnboardingOne";
+import RegisterScreen from "./RegisterScreen";
+import LocationScreen from "./LocationScreen";
 
 const Stack = createStackNavigator();
 
 const OnboardingProfileStack = () => {
   const [finishedOnboarding, setFinishedOnboarding] = useState(false);
+  const [firstName, setFirstName] = useState("");
 
   // Onboarding Screens
   if (!finishedOnboarding) {
     return (
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}
+      >
         <Stack.Screen name="OnboardingSwiper" component={OnboardingSwiper} />
-        <Stack.Screen name="OnboardingOne">
+        <Stack.Screen name="RegisterScreen">
           {(props) => (
-            <OnboardingOne
+            <RegisterScreen
+              {...props}
+              setFirstName={setFirstName}
+            />
+          )}
+        </Stack.Screen>
+        <Stack.Screen name="LocationScreen">
+          {(props) => (
+            <LocationScreen
               {...props}
               setFinishedOnboarding={setFinishedOnboarding}
             />
@@ -30,8 +44,19 @@ const OnboardingProfileStack = () => {
 
   // Profile Screens
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false
+      }}
+    >
+      <Stack.Screen name="ProfileScreen">
+        {(props) => (
+          <ProfileScreen
+            {...props}
+            firstName={firstName}
+          />
+        )}
+      </Stack.Screen>
     </Stack.Navigator>
   );
 };

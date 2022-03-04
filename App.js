@@ -4,9 +4,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import HomeStack from "./screens/HomeStack";
-import SettingStack from "./screens/SettingStack";
+import RecommendationStack from "./screens/RecommendationStack";
 import OnboardingProfileStack from "./screens/OnboardingProfileStack";
-// import WithCTA from "./screens/OnboardingProfileStack/OnboardingSwiper";
+
 import { useEffect } from "react";
 import { useNavigation } from '@react-navigation/native';
 
@@ -14,12 +14,6 @@ import { useNavigation } from '@react-navigation/native';
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-
-  // const navigation = useNavigation();
-
-  // useEffect(() => {
-  //   navigation.navigate('OnboardingProfileStack');
-  // }, []);
 
   return (
     <NavigationContainer>
@@ -29,7 +23,7 @@ export default function App() {
 
             if (route.name === 'HomeStack') {
               iconName = focused ? 'home' : 'home-outline';
-            } else if (route.name === 'SettingsStack') {
+            } else if (route.name === 'RecommendationStack') {
               iconName = focused ? 'restaurant' : 'restaurant-outline';
             } else if (route.name === 'OnboardingProfileStack') {
               iconName = focused ? 'person' : 'person-outline';
@@ -43,12 +37,13 @@ export default function App() {
           tabBarInactiveBackgroundColor: '#f8b432',
           tabBarStyle: {backgroundColor: "#f8b432"},
           tabBarShowLabel: false,
-        })
-        }>
+          headerShown: false,
+        })}
+        initialRouteName="OnboardingProfileStack"
+      >
         
-        <Tab.Screen name="HomeStack" component={HomeStack} options={{ headerShown: false }} />
-        <Tab.Screen name="SettingsStack" component={SettingStack} />
-        {/* <Tab.Screen name="OnboardingProfileStack" component={OnboardingProfileStack} /> */}
+        <Tab.Screen name="HomeStack" component={HomeStack} />
+        <Tab.Screen name="RecommendationStack" component={RecommendationStack} />
         <Tab.Screen name="OnboardingProfileStack" component={OnboardingProfileStack} />
 
       </Tab.Navigator>

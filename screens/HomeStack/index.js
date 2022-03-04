@@ -20,7 +20,6 @@ const HomeStack = () => {
           fontSize: 28,
         },
         headerBackTitleVisible: false,
-        // headerBackTitleStyle: {paddingLeft: "10%"},
         headerTintColor: 'black',
         headerTitleAlign: 'left',
       }} />
