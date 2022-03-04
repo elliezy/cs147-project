@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
 import React, { useEffect } from "react";
 
 import InstaStory from "../../react-native-insta-story/index";
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 const RestaurantPage = ({ navigation, route }) => {
@@ -28,7 +29,15 @@ const RestaurantPage = ({ navigation, route }) => {
         <View style={styles.restaurantInfoView}>
           <Text style={styles.restaurantInfoText}>MORE INFORMATION</Text>
         </View>
-        <Text style={styles.sectionText}>WALKTHROUGH</Text>
+        <View style={styles.walkthroughTitleView}>
+          <Text style={styles.sectionText}>WALKTHROUGH</Text>
+          <View style={styles.galleryView}>
+            <Ionicons name="grid-outline" size={18} style={styles.galleryIcon}></Ionicons>
+            <Text style={styles.galleryText}>GALLERY</Text>
+          </View>
+          
+        </View>
+        
 
         
 
@@ -114,14 +123,35 @@ const styles = StyleSheet.create({
     marginTop: "3%",
     marginBottom: "4%",
   },
+  walkthroughTitleView: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+  galleryView: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    // backgroundColor: "gray"
+  },
+  galleryIcon: {
+    marginRight: "4%",
+    // flex: 1,
+  },
+  galleryText: {
+    fontSize: 16,
+    textDecorationLine: 'underline',
+    // flex: 4,
+  },
   flatlistView: {
-    flex: 8,
+    flex: 10,
     // paddingLeft: "5%",
     // backgroundColor: "gray",
     // paddingRight: "5%",
   },
   restaurantInfoView: {
-    flex: 2,
+    flex: 3,
     backgroundColor: "#F1EBEA",
     justifyContent: "center",
     width: "100%",
@@ -135,7 +165,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   menuView: {
-    flex: 8,
+    flex: 7,
     // backgroundColor: "purple",
     width: "100%",
     paddingLeft: "5%",
