@@ -26,7 +26,7 @@ const RestaurantPage = ({ navigation, route }) => {
       </View>
       <View style={styles.walkthroughView}>
         <View style={styles.restaurantInfoView}>
-          <Text style={styles.restaurantInfoText}>RESTAURANT INFORMATION</Text>
+          <Text style={styles.restaurantInfoText}>MORE INFORMATION</Text>
         </View>
         <Text style={styles.sectionText}>WALKTHROUGH</Text>
 
@@ -111,11 +111,11 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingLeft: "5%",
     paddingRight: "5%",
-    marginTop: "4%",
+    marginTop: "3%",
     marginBottom: "4%",
   },
   flatlistView: {
-    flex: 9,
+    flex: 8,
     // paddingLeft: "5%",
     // backgroundColor: "gray",
     // paddingRight: "5%",
