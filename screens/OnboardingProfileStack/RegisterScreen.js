@@ -14,7 +14,7 @@ const RegisterScreen = ({ setFirstName }) => {
     <View style={styles.container}>
       <View style={styles.top}>
 	    <Pressable onPress={() => navigation.navigate('OnboardingSwiper')}>
-		  <Ionicons name='arrow-back-outline' size='30' color='black' />
+		  <Ionicons name='arrow-back-outline' size={30} color='black' />
 		</Pressable>
       </View>
       <View style={styles.title}>

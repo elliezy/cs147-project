@@ -71,8 +71,11 @@ const styles = StyleSheet.create({
         paddingLeft: "1%"
     },
     image: {
-        width: Platform.isPad ? 140 : 120,
-        height: Platform.isPad ? 140 : 120,
+        // width: Platform.isPad ? 140 : 120,
+        // height: Platform.isPad ? 140 : 120,
+        // width: "86%",
+        width: Dimensions.get('window').width * 0.28,
+        height: Dimensions.get('window').height * 0.13,
         margin: 8,
         resizeMode: "cover",
         flex: Platform.isPad ? 2 : 3,

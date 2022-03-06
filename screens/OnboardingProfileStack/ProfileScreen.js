@@ -1,10 +1,18 @@
 import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { useEffect } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import DietaryRestrictions from "./DietaryRestrictions";
 import SpecialDiets from "./SpecialDiets";
 
 const ProfileScreen = ({ firstName }) => {
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    navigation.getParent()?.setOptions({ tabBarStyle: {backgroundColor: "#f8b432", paddingBottom: "4%",},});
+    return () => navigation.getParent()?.setOptions({ tabBarStyle: {backgroundColor: "#f8b432", paddingBottom: "4%",}, });
+  }, [navigation]);
+
   return (
     <View style={styles.container}>
 

@@ -35,7 +35,7 @@ export default function App() {
           tabBarInactiveTintColor: 'white',
           tabBarActiveBackgroundColor: '#f8b432',
           tabBarInactiveBackgroundColor: '#f8b432',
-          tabBarStyle: {backgroundColor: "#f8b432"},
+          tabBarStyle: {backgroundColor: "#f8b432", paddingBottom: "4%",},
           tabBarShowLabel: false,
           headerShown: false,
         })}

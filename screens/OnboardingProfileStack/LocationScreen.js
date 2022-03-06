@@ -11,7 +11,7 @@ const LocationScreen = ({ setFinishedOnboarding }) => {
     <View style={styles.container}>
       <View style={styles.top}>
         <Pressable onPress={() => navigation.navigate('RegisterScreen')}>
-		  <Ionicons name='arrow-back-outline' size='30' color='black' />
+		  <Ionicons name='arrow-back-outline' size={30} color='black' />
 		</Pressable>
       </View>
 

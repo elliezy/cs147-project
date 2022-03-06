@@ -33,19 +33,19 @@ const OnboardingSwiper = ({ setFinishedOnboarding }) => {
       pages={[
         {
           backgroundColor: '#f8b432',
-          image: <Ionicons name='map' size='100' color='black' />,
+          image: <Ionicons name='map' size={100} color='black' />,
           title: 'Restaurant Walkthroughs',
           subtitle: 'See a “step by step” walkthrough of the dining experience at restaurants.',
         },
         {
           backgroundColor: '#f8b432',
-          image: <Ionicons name='book' size='100' color='black' />,
+          image: <Ionicons name='book' size={100} color='black' />,
           title: 'Filter & Sort Menus',
           subtitle: 'Easily filter out dishes based on your personal dietary restrictions.',
         },
         {
           backgroundColor: '#f8b432',
-          image: <Ionicons name='restaurant' size='100' color='black' />,
+          image: <Ionicons name='restaurant' size={100} color='black' />,
           title: 'Get Personalized Noms',
           subtitle: ( 
             <View style={styles.container}>
